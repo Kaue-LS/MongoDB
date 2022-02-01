@@ -1,0 +1,36 @@
+{
+  "name": "api-com-nodejs",
+  "version": "1.0.0",
+  "description": "Usando nodejs, express e mongo no cadastro de clientes",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "cadastro": "npm start --prefix cadastro",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run cadastro\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaue-LS/API-com-Nodejs.git"
+  },
+  "author": "KaueLS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaue-LS/API-com-Nodejs/issues"
+  },
+  "homepage": "https://github.com/Kaue-LS/API-com-Nodejs#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
